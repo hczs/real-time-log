@@ -46,6 +46,9 @@ public class RealTimeLogApplication {
     /**
      * 向客户端推送log
      * 就是从LogQueue中取出日志发送到客户端
+     * 执行顺序
+     * Constructor(构造方法) -> @Autowired(依赖注入) -> @PostConstruct(注释的方法)
+     * PostConstruct只会被调用一次
      */
     @PostConstruct
     public void pushLogs() {
