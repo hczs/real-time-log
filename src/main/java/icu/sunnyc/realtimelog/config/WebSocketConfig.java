@@ -1,22 +1,8 @@
 package icu.sunnyc.realtimelog.config;
 
-import icu.sunnyc.realtimelog.entity.LoggerMessage;
-import icu.sunnyc.realtimelog.queues.LogQueue;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
-
-import javax.annotation.PostConstruct;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.ThreadPoolExecutor.AbortPolicy;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author ：hc
